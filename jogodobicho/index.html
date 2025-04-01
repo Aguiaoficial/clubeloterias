@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clube Loterias - A melhor plataforma para o Jogo do Bicho. Confira puxadas, sonhos, palpites diários e resultados das principais bancas!">
+    <meta name="keywords" content="Clube Loterias, jogo do bicho, puxadas, sonhos, palpites, LOTEP, MALUCA/BA, LOOKLOTERIAS, NACIONAL, PT RIO">
+    <meta name="author" content="Clube Loterias">
+    <title>Clube Loterias - Jogo do Bicho</title>
+
+    <!-- CSS Crítico Inline -->
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+        body {background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; line-height: 1.6;}
+        .container {max-width: 1200px; margin: 0 auto; padding: 20px;}
+        nav {position: sticky; top: 0; background: rgba(26,26,46,0.9); padding: 15px 20px; z-index: 10; border-bottom: 1px solid #ffd700; display: flex; justify-content: space-between; align-items: center;}
+        .nav-brand {color: #ffd700; font-size: 1.5em; font-weight: bold;}
+        .nav-links {display: flex; align-items: center;}
+        nav a {color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.1em; transition: color .3s;}
+        nav a:hover, nav a.active {color: #ffd700;}
+        .intro {text-align: center; margin-bottom: 40px;}
+        .intro h1 {font-size: 1.8em; color: #ffd700; margin-bottom: 20px;}
+        section {margin: 40px 0;}
+        section h2 {font-size: 1.5em; color: #ffd700; text-align: center; margin-bottom: 20px;}
+
+        /* Estilo dos Cards Expansíveis */
+        .collapsible-card {background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 15px;}
+        .collapsible-header {padding: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;}
+        .collapsible-header h3 {color: #ffd700; font-size: 1.2em;}
+        .collapsible-header .toggle-icon {font-size: 1.2em;}
+        .collapsible-content {display: none; padding: 15px;}
+        .collapsible-content.active {display: block;}
+        .collapsible-content p {font-size: 0.9em;}
+        .collapsible-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+        table {width: 100%; border-collapse: collapse; margin-top: 20px;}
+        th, td {padding: 10px; border: 1px solid #ffd700;}
+        th {background: #28a745; font-weight: bold;}
+        td {background: rgba(255,255,255,0.05);}
+
+        @media (max-width: 768px) {
+            .nav-links {flex-direction: column;}
+            nav a {margin: 10px 0;}
+            .collapsible-grid {grid-template-columns: 1fr;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navegação -->
+        <nav>
+            <span class="nav-brand">Clube Loterias</span>
+            <div class="nav-links">
+                <a href="#puxadas">Puxadas</a>
+                <a href="#sonhos">Sonhos</a>
+                <a href="#palpites">Palpites</a>
+                <a href="#resultados">Resultados</a>
+            </div>
+        </nav>
+
+        <!-- Introdução -->
+        <div id="intro" class="intro">
+            <h1>Clube Loterias - Tudo para o Jogo do Bicho</h1>
+            <p>Confira puxadas, sonhos, palpites diários e resultados das principais bancas!</p>
+        </div>
+
+        <!-- Puxadas -->
+        <section id="puxadas">
+            <h2>Puxadas de Cada Animal</h2>
+            <div class="collapsible-grid">
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>01 - Avestruz</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Águia, Galo, Pavão, Peru</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>02 - Águia</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Galo, Pavão, Peru</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>03 - Burro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Cabra, Touro, Vaca</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>04 - Borboleta</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Cobra, Macaco, Porco</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>05 - Cachorro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Águia, Pavão, Peru</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>06 - Cabra</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Burro, Touro, Vaca</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>07 - Carneiro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Águia, Burro, Macaco</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>08 - Camelo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Elefante, Gato, Leão</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>09 - Cobra</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Porco, Borboleta, Macaco</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>10 - Coelho</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Galo, Pavão, Peru</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>11 - Cavalo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Elefante, Touro, Veado</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>12 - Elefante</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Gato, Tigre, Urso</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>13 - Galo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Águia, Pavão, Peru</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>14 - Gato</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Leão, Cabra, Elefante</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>15 - Jacaré</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Porco, Burro, Gato</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>16 - Leão</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Elefante, Camelo, Gato</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>17 - Macaco</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Cobra, Porco, Borboleta</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>18 - Porco</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Cobra, Jacaré, Cachorro</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>19 - Pavão</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Águia, Galo</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>20 - Peru</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Águia, Galo</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>21 - Touro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Carneiro, Burro</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>22 - Tigre</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Cachorro, Cabra, Peru</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>23 - Urso</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Elefante, Gato, Tigre</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>24 - Veado</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Avestruz, Águia, Galo</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>25 - Vaca</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Puxa: Burro, Cabra, Touro</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sonhos (mantido igual, apenas corrigindo as dezenas se necessário) -->
+        <section id="sonhos">
+            <h2>Sonhos e Seus Bichos</h2>
+            <div class="collapsible-grid">
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com água suja</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com cavalo correndo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cavalo (11)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com cobra</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com dinheiro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Porco (18)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com fogo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Pavão (19)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com morte</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Elefante (12)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com criança</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Coelho (10)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com cachorro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cachorro (05)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com chuva</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com sangue</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Leão (16)</p></div>
+                </div>
+                <!-- Mantive os 90 sonhos restantes como estavam, sem alterações nas dezenas por agora -->
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com peixe</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com flor</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Borboleta (04)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com casa</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Pavão (19)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com estrada</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Burro (03)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com bebê</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Coelho (10)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com dente</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Elefante (12)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com comida</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Porco (18)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com mar</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com voar</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Águia (02)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com ouro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Touro (21)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com igreja</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com amigo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com sapato</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cavalo (11)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com nudez</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cavalo (11)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com faca</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Galo (13)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com nuvem</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com ilha</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com máscara</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Leão (16)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com pedra</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Macaco (17)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com rio</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Pavão (19)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com acidente</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Leão (16)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com anjo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Elefante (12)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com escada</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com leite</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cavalo (11)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com sal</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com ponte</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com beijo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Coelho (10)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com medo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com vermelho</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com casamento</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Porco (18)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com lago</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Porco (18)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com mãe</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Porco (18)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com ninho</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Pavão (19)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com pão</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Pavão (19)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com defunto</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Galo (13)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com óculos</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Galo (13)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com umbigo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com pé</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Leão (16)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com joia</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Macaco (17)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com caverna</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Urso (23)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com vento</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Peru (20)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com árvore</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com areia</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com noite</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com viagem</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Avestruz (01)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com livro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com escola</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com tinta</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Borboleta (04)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com chave</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Touro (21)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com porta</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Burro (03)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com tempestade</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Tigre (22)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com bicicleta</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Coelho (10)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com relógio</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Galo (13)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com lua</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Veado (24)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com sol</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Leão (16)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com estrela</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Avestruz (01)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com jardim</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Borboleta (04)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com cachoeira</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com mercado</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Porco (18)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com festa</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Pavão (19)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com dança</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Peru (20)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com briga</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Tigre (22)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com carta</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com telefone</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Macaco (17)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com roupa</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cavalo (11)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com cabelo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Elefante (12)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com espelho</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com janela</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com lâmpada</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com moeda</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com ovo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Carneiro (07)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com homem</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com lápis</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com pirâmide</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com seios</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com rato</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com barata</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Cobra (09)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com formiga</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Borboleta (04)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com abelha</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Peru (20)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com passarinho</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Avestruz (01)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com avião</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Águia (02)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com carro</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Burro (03)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com trem</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Touro (21)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com navio</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com ônibus</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com moto</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Coelho (10)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com praia</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Jacaré (15)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com montanha</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Urso (23)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com floresta</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Tigre (22)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com deserto</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Camelo (08)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com neve</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Urso (23)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com gelo</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Elefante (12)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com calor</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Leão (16)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com sombra</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Gato (14)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com silêncio</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Veado (24)</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>Sonhar com barulho</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content"><p>Dá Macaco (17)</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Palpites Corrigidos -->
+        <section id="palpites">
+            <h2>Palpites do Dia (01/04/2025)</h2>
+            <div class="collapsible-grid">
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>LOTEP</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content">
+                        <p><strong>Grupo 01 - Avestruz:</strong> 1201, 3402, 5603, 7804<br>
+                        <strong>Grupo 09 - Cobra:</strong> 1233, 4534, 6735, 8936<br>
+                        <strong>Grupo 17 - Macaco:</strong> 1265, 3466, 5667, 7868</p>
+                    </div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>MALUCA/BA</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content">
+                        <p><strong>Grupo 02 - Águia:</strong> 1205, 3406, 5607, 7808<br>
+                        <strong>Grupo 13 - Galo:</strong> 1249, 3450, 5651, 7852<br>
+                        <strong>Grupo 20 - Peru:</strong> 1277, 3478, 5679, 7880</p>
+                    </div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>LOOKLOTERIAS</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content">
+                        <p><strong>Grupo 03 - Burro:</strong> 1209, 3410, 5611, 7812<br>
+                        <strong>Grupo 12 - Elefante:</strong> 1245, 3446, 5647, 7848<br>
+                        <strong>Grupo 24 - Veado:</strong> 1293, 3494, 5695, 7896</p>
+                    </div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>NACIONAL</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content">
+                        <p><strong>Grupo 05 - Cachorro:</strong> 1217, 3418, 5619, 7820<br>
+                        <strong>Grupo 14 - Gato:</strong> 1253, 3454, 5655, 7856<br>
+                        <strong>Grupo 23 - Urso:</strong> 1289, 3490, 5691, 7892</p>
+                    </div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>PT RIO</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content">
+                        <p><strong>Grupo 07 - Carneiro:</strong> 1225, 3426, 5627, 7828<br>
+                        <strong>Grupo 15 - Jacaré:</strong> 1257, 3458, 5659, 7860<br>
+                        <strong>Grupo 21 - Touro:</strong> 1281, 3482, 5683, 7884</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section id="resultados">
+            <h2>Resultados das Bancas</h2>
+            <div class="collapsible-grid">
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>LOTEP</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content" id="lotep-result"><p>Carregando...</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>MALUCA/BA</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content" id="maluca-result"><p>Carregando...</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>LOOKLOTERIAS</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content" id="look-result"><p>Carregando...</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>NACIONAL</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content" id="nacional-result"><p>Carregando...</p></div>
+                </div>
+                <div class="collapsible-card">
+                    <div class="collapsible-header"><h3>PT RIO</h3><span class="toggle-icon">+</span></div>
+                    <div class="collapsible-content" id="ptrio-result"><p>Carregando...</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript para Cards Expansíveis e Resultados -->
+    <script>
+        // Função para Cards Expansíveis
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+                const icon = header.querySelector('.toggle-icon');
+                icon.textContent = content.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Função para buscar resultados (exemplo usando fetch de um site fictício)
+        async function fetchResults() {
+            const bancas = ['lotep', 'maluca', 'look', 'nacional', 'ptrio'];
+            for (let banca of bancas) {
+                try {
+                    const response = await fetch(`https://api.exemplo.com/resultados/${banca}`, {
+                        mode: 'cors',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+                    const data = await response.json();
+                    const resultDiv = document.getElementById(`${banca}-result`);
+                    resultDiv.innerHTML = `<p>1º: ${data[0].numero} - ${data[0].animal}</p><p>2º: ${data[1].numero} - ${data[1].animal}</p><p>3º: ${data[2].numero} - ${data[2].animal}</p>`;
+                } catch (error) {
+                    console.error(`Erro ao buscar resultados de ${banca}:`, error);
+                    document.getElementById(`${banca}-result`).innerHTML = `<p>Erro ao carregar resultados</p>`;
+                }
+            }
+        }
+
+        // Chama a função ao carregar a página
+        window.onload = fetchResults;
+    </script>
+</body>
+</html>
