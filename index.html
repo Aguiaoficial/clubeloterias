@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ClubeLoterias - O Maior Portal de Apostas Online</title>
+    <title>ClubeLoterias - Apostas Online Profissionais</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta property="og:image" content="assets/images/whatsapp-share.jpg">
     <meta property="og:title" content="ClubeLoterias - Apostas em Jogo do Bicho, Cassino e Futebol">
-    <meta property="og:description" content="Palpites automáticos, jogos ao vivo e prêmios incríveis. Junte-se ao clube da sorte!">
-    <meta name="description" content="O melhor site de apostas online com jogo do bicho, cassino, futebol, horóscopo e mais.">
+    <meta property="og:description" content="Palpites automáticos, jogos ao vivo e prêmios incríveis. O melhor site de apostas do Brasil!">
+    <meta name="description" content="ClubeLoterias oferece apostas em jogo do bicho, cassino e futebol com palpites profissionais e resultados ao vivo.">
     <meta name="keywords" content="apostas, jogo do bicho, cassino, futebol, palpites, loterias, ao vivo">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra de Notificações -->
-    <div id="notification-bar" class="notification-bar">
-        <span id="winner-message">Aguarde os ganhadores...</span>
-    </div>
+    <!-- Notificações de Ganhadores -->
+    <div id="notification-bar" class="notification-bar"></div>
 
-    <!-- Cabeçalho Principal -->
+    <!-- Cabeçalho -->
     <header class="main-header">
         <div class="top-bar">
             <div class="logo">
                 <img src="assets/images/logo.png" alt="ClubeLoterias Logo" width="150">
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Pesquise jogos, palpites ou estratégias..." aria-label="Pesquisa">
+                <input type="text" placeholder="Pesquise jogos ou estratégias..." aria-label="Pesquisa">
                 <button type="submit">🔍</button>
             </div>
             <div class="user-options">
@@ -42,7 +40,6 @@
                 <li><a href="#cassino">Cassino</a></li>
                 <li><a href="#futebol">Futebol</a></li>
                 <li><a href="#live-games">Ao Vivo</a></li>
-                <li><a href="#horoscopo">Horóscopo</a></li>
                 <li><a href="#estrategias">Estratégias</a></li>
                 <li><a href="#parceiros">Parceiros</a></li>
             </ul>
@@ -51,39 +48,49 @@
 
     <!-- Conteúdo Principal -->
     <main>
-        <!-- Banner Principal -->
+        <!-- Banner -->
         <section id="home" class="hero-banner">
             <div class="banner-content">
-                <h1>Bem-vindo ao ClubeLoterias</h1>
-                <p>O maior portal de apostas online com palpites automáticos e jogos ao vivo!</p>
-                <a href="#cadastro" class="btn-cta">Jogue Agora</a>
+                <h1>ClubeLoterias</h1>
+                <p>Aposte com inteligência e ganhe com os melhores palpites do Brasil!</p>
+                <a href="#cadastro" class="btn-cta">Entre no Grupo VIP</a>
             </div>
         </section>
 
-        <!-- Seção Jogo do Bicho -->
+        <!-- Jogo do Bicho -->
         <section id="jogo-do-bicho" class="section-game">
             <h2>Jogo do Bicho</h2>
             <div class="palpites-container">
                 <h3>Palpites do Dia - 01/04/2025</h3>
-                <div class="palpites-tabs">
-                    <button class="tab-btn" data-tab="lotep">LOTEP</button>
-                    <button class="tab-btn" data-tab="maluca">MALUCA/BA</button>
-                    <button class="tab-btn" data-tab="ptrio">PT RIO</button>
-                    <button class="tab-btn" data-tab="nacional">NACIONAL</button>
-                    <button class="tab-btn" data-tab="lookgo">LOOK/GO</button>
-                    <button class="tab-btn" data-tab="federal" id="federal-tab">FEDERAL (Qua/Sáb)</button>
-                </div>
-                <div class="palpites-content">
-                    <div id="lotep" class="tab-content"></div>
-                    <div id="maluca" class="tab-content"></div>
-                    <div id="ptrio" class="tab-content"></div>
-                    <div id="nacional" class="tab-content"></div>
-                    <div id="lookgo" class="tab-content"></div>
-                    <div id="federal" class="tab-content"></div>
+                <div class="palpites-grid">
+                    <div class="palpite-card" data-tab="lotep">
+                        <h4>LOTEP</h4>
+                        <div id="lotep" class="palpite-content"></div>
+                    </div>
+                    <div class="palpite-card" data-tab="maluca">
+                        <h4>MALUCA/BA</h4>
+                        <div id="maluca" class="palpite-content"></div>
+                    </div>
+                    <div class="palpite-card" data-tab="ptrio">
+                        <h4>PT RIO</h4>
+                        <div id="ptrio" class="palpite-content"></div>
+                    </div>
+                    <div class="palpite-card" data-tab="nacional">
+                        <h4>NACIONAL</h4>
+                        <div id="nacional" class="palpite-content"></div>
+                    </div>
+                    <div class="palpite-card" data-tab="lookgo">
+                        <h4>LOOK/GO</h4>
+                        <div id="lookgo" class="palpite-content"></div>
+                    </div>
+                    <div class="palpite-card" data-tab="federal" id="federal-card">
+                        <h4>FEDERAL (Qua/Sáb)</h4>
+                        <div id="federal" class="palpite-content"></div>
+                    </div>
                 </div>
             </div>
             <div class="cotacoes">
-                <h3>Cotações do Jogo do Bicho</h3>
+                <h3>Cotações Oficiais</h3>
                 <table>
                     <thead>
                         <tr><th>Tipo de Aposta</th><th>Valor da Cotação</th></tr>
@@ -107,137 +114,104 @@
                     </tbody>
                 </table>
             </div>
-            <div class="extras">
-                <div class="sonhos">
-                    <h3>Sonhos e Números</h3>
-                    <p>Sonhou com água? Jogue na <strong>Baleia</strong> (93-96)!</p>
-                    <p>Sonhou com fogo? Jogue no <strong>Galo</strong> (49-52)!</p>
-                </div>
-                <div class="puxadas">
-                    <h3>Puxadas</h3>
-                    <p>Avestruz puxa: Pavão, Coelho</p>
-                    <p>Cobra puxa: Gato, Tigre</p>
-                </div>
-            </div>
         </section>
 
-        <!-- Seção Cassino -->
+        <!-- Cassino -->
         <section id="cassino" class="section-game">
             <h2>Cassino Online</h2>
             <div class="horarios-pagantes">
-                <h3>Horários Pagantes do Dia</h3>
-                <ul></ul>
+                <h3>Horários Pagantes</h3>
+                <ul class="horarios-list"></ul>
             </div>
             <div class="jogos-populares">
                 <h3>Jogos em Destaque</h3>
-                <div class="game-card">Roleta</div>
-                <div class="game-card">Slots</div>
-                <div class="game-card">Blackjack</div>
+                <div class="game-grid">
+                    <div class="game-card">Roleta</div>
+                    <div class="game-card">Slots</div>
+                    <div class="game-card">Blackjack</div>
+                </div>
             </div>
         </section>
 
-        <!-- Seção Futebol -->
+        <!-- Futebol -->
         <section id="futebol" class="section-game">
             <h2>Apostas em Futebol</h2>
             <div class="palpites-futebol">
                 <h3>Palpites do Dia - 02/04/2025</h3>
                 <div class="competicao">
                     <h4>Libertadores</h4>
-                    <div class="jogo">
+                    <div class="jogo-card">
                         <p>Flamengo x Palmeiras</p>
-                        <p>Palpite: Vitória do Flamengo</p>
+                        <p id="palpite-lib-1">Flamengo ganha</p>
                         <span class="resultado" id="resultado-lib-1"></span>
                     </div>
                 </div>
                 <div class="competicao">
                     <h4>Sudamericana</h4>
-                    <div class="jogo">
+                    <div class="jogo-card">
                         <p>São Paulo x Racing</p>
-                        <p>Palpite: Empate</p>
+                        <p id="palpite-sud-1">Empate</p>
                         <span class="resultado" id="resultado-sud-1"></span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Jogos ao Vivo -->
+        <!-- Jogos ao Vivo -->
         <section id="live-games" class="section-game">
             <h2>Jogos ao Vivo</h2>
-            <div class="live-game">
-                <h3>Jogo do Bicho - PT RIO</h3>
-                <p id="live-result">Aguarde o próximo resultado...</p>
-            </div>
-            <div class="live-game">
-                <h3>Futebol - Libertadores</h3>
-                <p id="live-score">Flamengo 0 x 0 Palmeiras</p>
+            <div class="live-grid">
+                <div class="live-card">
+                    <h3>Jogo do Bicho - PT RIO</h3>
+                    <p id="live-result">Aguarde o próximo resultado...</p>
+                </div>
+                <div class="live-card">
+                    <h3>Futebol - Libertadores</h3>
+                    <p id="live-score">Flamengo 0 x 0 Palmeiras</p>
+                </div>
             </div>
         </section>
 
-        <!-- Seção Estratégias -->
+        <!-- Estratégias -->
         <section id="estrategias" class="section-game">
-            <h2>Estratégias e Técnicas</h2>
-            <div class="estrategia-item">
-                <h3>Soma de Dezenas</h3>
-                <p>Some as últimas dezenas sorteadas para prever a próxima!</p>
-            </div>
-            <div class="estrategia-item">
-                <h3>Padrões de Cassino</h3>
-                <p>Aposte nos horários pagantes para maximizar lucros.</p>
-            </div>
-        </section>
-
-        <!-- Seção Horóscopo -->
-        <section id="horoscopo" class="section-game">
-            <h2>Horóscopo da Sorte</h2>
-            <div class="signo">
-                <h3>Áries</h3>
-                <p>Aposte na centena hoje!</p>
-            </div>
-            <div class="signo">
-                <h3>Touro</h3>
-                <p>O grupo do Tigre é sua sorte!</p>
-            </div>
-            <div class="signo">
-                <h3>Gêmeos</h3>
-                <p>Tente a milhar para grandes prêmios!</p>
+            <h2>Estratégias e Dicas</h2>
+            <div class="estrategias-grid">
+                <div class="estrategia-card">
+                    <h3>Soma de Dezenas</h3>
+                    <p>Some as últimas dezenas sorteadas para prever a próxima!</p>
+                </div>
+                <div class="estrategia-card">
+                    <h3>Padrões de Cassino</h3>
+                    <p>Aposte nos horários pagantes para maximizar lucros.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Seção Cadastro -->
+        <!-- Cadastro -->
         <section id="cadastro" class="section-cadastro">
-            <h2>Junte-se ao ClubeLoterias</h2>
-            <div class="vantagens">
-                <h3>Vantagens de se Cadastrar</h3>
-                <ul>
-                    <li>Palpites exclusivos para todas as bancas</li>
-                    <li>Bônus de R$ 50 no primeiro depósito</li>
-                    <li>Acesso a estratégias premium</li>
-                    <li>Suporte 24/7 via chat</li>
-                    <li>Retiradas rápidas e seguras</li>
-                </ul>
+            <h2>Entre no Grupo VIP</h2>
+            <div class="cadastro-content">
+                <p>Junte-se ao nosso grupo exclusivo no WhatsApp e receba somas, palpites e estratégias exclusivas para ganhar mais!</p>
+                <a href="https://chat.whatsapp.com/exemplo" target="_blank" class="btn-cta">Entrar no Grupo</a>
             </div>
             <div class="credibilidade">
-                <h3>Por que confiar em nós?</h3>
-                <p>Site licenciado, pagamentos garantidos em até 24h e mais de 100 mil usuários satisfeitos.</p>
+                <h3>Credibilidade Garantida</h3>
+                <p>Plataforma licenciada, com mais de 100 mil apostadores e pagamentos em até 24h.</p>
             </div>
-            <form class="cadastro-form">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="E-mail" required>
-                <input type="password" placeholder="Senha" required>
-                <button type="submit">Cadastrar Agora</button>
-            </form>
         </section>
 
-        <!-- Seção Parceiros -->
+        <!-- Parceiros -->
         <section id="parceiros" class="section-parceiros">
             <h2>Jogue Agora</h2>
-            <div class="parceiro-card">
-                <h3>Banca Águia Oficial</h3>
-                <a href="https://aguiaoficial.club" target="_blank">aguiaoficial.club</a>
-            </div>
-            <div class="parceiro-card">
-                <h3>Banca Feiticeira VIP</h3>
-                <a href="https://feiticeiravip.club" target="_blank">feiticeiravip.club</a>
+            <div class="parceiros-grid">
+                <div class="parceiro-card">
+                    <h3>Banca Águia Oficial</h3>
+                    <a href="https://aguiaoficial.club" target="_blank">aguiaoficial.club</a>
+                </div>
+                <div class="parceiro-card">
+                    <h3>Banca Feiticeira VIP</h3>
+                    <a href="https://feiticeiravip.club" target="_blank">feiticeiravip.club</a>
+                </div>
             </div>
         </section>
     </main>
@@ -247,7 +221,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Sobre Nós</h4>
-                <p>O ClubeLoterias é o seu destino para apostas online no Brasil.</p>
+                <p>ClubeLoterias: sua casa de apostas online no Brasil.</p>
             </div>
             <div class="footer-section">
                 <h4>Links Rápidos</h4>
@@ -267,6 +241,6 @@
         <p class="footer-copy">© 2025 ClubeLoterias - Todos os direitos reservados.</p>
     </footer>
 
-    <script src="scripts.js"></script> <!-- Link para o JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
